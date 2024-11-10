@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel for form -->
+        <div id="left-panel">
+            <div class="form-container">
+                <h1>Enter Your CV Details</h1>
+                <form id="cvForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required oninput="updatePreview()">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required oninput="updatePreview()">
+                    <br>
+                    <label for="contact">Contact No:</label>
+                    <input type="text" id="contact" required oninput="updatePreview()">
+                    <br>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required oninput="updatePreview()">
+                    <br>
+                    <label for="education">Education:</label>
+                    <input type="text" id="education">
+                    <button type="button" onclick="addEducation()">Add</button>
+                    <br>
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience">
+                    <button type="button" onclick="addExperience()">Add</button>
+                    <br>
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills">
+                    <button type="button" onclick="addSkills()">Add</button>
+                    <br>
+                    <label for="image">Profile Image (File Upload):</label>
+                    <input type="file" id="image" accept="image/*" onchange="previewImage()">
+                    <br>
+                    <label for="imageURL">Profile Image (Image URL):</label>
+                    <input type="text" id="imageURL" placeholder="Paste image URL here" oninput="updateImageFromURL()">
+                    <br>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!-- Right Panel for preview -->
+        <div id="right-panel">
+            <section id="showhide1">
+                <h2>Personal Info</h2>
+                <ul id="personal-info">
+                    <li>Name: </li>
+                    <li>Email: </li>
+                    <li>Contact No: </li>
+                    <li>Address: </li>
+                </ul>
+            </section>
+            <section id="showhide2">
+                <h2>Education</h2>
+                <ul id="education-list"></ul>
+            </section>
+            <section id="showhide3">
+                <h2>Experience</h2>
+                <ul id="experience-list"></ul>
+            </section>
+            <section id="showhide4">
+                <h2>Skills</h2>
+                <ul id="skills-list"></ul>
+            </section>
+            <section id="profile-image-section">
+                <h2>Profile Image</h2>
+                <img id="profile-image" src="" alt="Profile Image" style="display:none; max-width:200px;">
+            </section>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>

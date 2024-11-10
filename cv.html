@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated CV</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- <h1 style="text-align: center;">Generated CV</h1> -->
+        <!-- Left Panel with buttons and image -->
+        <div id="left-panel">
+            <div id="profile-image-section">
+                <!-- <h2>Profile Image</h2> -->
+                <img id="profile-image" src="" alt="Profile Image" style="max-width:200px;">
+            </div>
+            <div id="buttons-section">
+                <!-- Control buttons for toggling sections -->
+                <button id="bulb-button1" class="bulb" onclick="showhidee('showhide1')">Show Personal Info</button>
+                <button id="bulb-button2" class="bulb" onclick="showhidee('showhide2')">Show Education</button>
+                <button id="bulb-button3" class="bulb" onclick="showhidee('showhide3')">Show Experience</button>
+                <button id="bulb-button4" class="bulb" onclick="showhidee('showhide4')">Show Skills</button>
+                
+                <!-- Extra buttons for theme and mode -->
+                <div id="extra-buttons">
+                    <button onclick="changeTheme()">Change Theme</button>
+                    <button onclick="toggleDarkMode()">Dark Mode</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel for content sections -->
+        <div id="right-panel">
+            <section id="showhide1">
+                <h2>Personal Info</h2>
+                <ul id="personal-info"></ul>
+            </section>
+            <section id="showhide2">
+                <h2>Education</h2>
+                <ul id="education-list"></ul>
+            </section>
+            <section id="showhide3">
+                <h2>Experience</h2>
+                <ul id="experience-list"></ul>
+            </section>
+            <section id="showhide4">
+                <h2>Skills</h2>
+                <ul id="skills-list"></ul>
+            </section>
+            <!-- <section id="profile-image-section">
+                <h2>Profile Image</h2>
+                <img id="profile-image" src="" alt="Profile Image" style="max-width:200px;">
+            </section> -->
+                </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="showhide1">
+        <h2>Personal Info</h2>
+        <ul id="personal-info"></ul>
+    </section>
+    <section id="showhide2">
+        <h2>Education</h2>
+        <ul id="education-list"></ul>
+    </section>
+    <section id="showhide3">
+        <h2>Experience</h2>
+        <ul id="experience-list"></ul>
+    </section>
+    <section id="showhide4">
+        <h2>Skills</h2>
+        <ul id="skills-list"></ul>
+    </section>
+    <section id="profile-image-section">
+        <h2>Profile Image</h2>
+        <img id="profile-image" src="" alt="Profile Image" style="max-width:200px;">
+    </section> -->
+    <script src="cv.js"></script>
+</body>
+</html>
